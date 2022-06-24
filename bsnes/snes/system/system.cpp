@@ -138,6 +138,7 @@ void System::power() {
   if(cartridge.has_st0018()) st0018.enable();
   if(cartridge.has_msu1()) msu1.enable();
   if(cartridge.has_serial()) serial.enable();
+  if(cartridge.has_21fx()) s21fx.enable();
 
   cpu.power();
   smp.power();
@@ -226,6 +227,7 @@ void System::unload() {
   if(cartridge.mode() == Cartridge::Mode::SuperGameBoy) supergameboy.unload();
   
   if(cartridge.has_msu1()) msu1.unload();
+  if(cartridge.has_21fx()) s21fx.unload();
 }
 
 void System::scanline() {

@@ -57,6 +57,7 @@ void Cartridge::load(Mode cartridge_mode, const lstring &xml_list) {
   has_st0018     = false;
   has_msu1       = false;
   has_serial     = false;
+  has_21fx       = false;
 
   parse_xml(xml_list);
 //print(xml_list[0], "\n\n");
